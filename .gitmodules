@@ -1,6 +1,0 @@
-[submodule "game-stats-backend"]
-	path = game-stats-backend
-	url = https://github.com/xottab-ops/game-stats-backend.git
-[submodule "game-stats-frontend"]
-	path = game-stats-frontend
-	url = https://github.com/xottab-ops/game-stats-frontend.git
