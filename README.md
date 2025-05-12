@@ -15,7 +15,7 @@ The Game Statistic Application is a full-stack project for managing and visualiz
   - Docker
 - **Frontend**:
   - React, Material-UI
-  - Chart.js
+  - Nginx
   - Docker
 
 ## Installation and Setup
@@ -23,7 +23,7 @@ The Game Statistic Application is a full-stack project for managing and visualiz
 ### 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/xottab-ops/game-stats-app.git
 cd game-stats-app
 ```
 
