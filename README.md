@@ -25,6 +25,8 @@ The Game Statistic Application is a full-stack project for managing and visualiz
 ```bash
 git clone https://github.com/xottab-ops/game-stats-app.git
 cd game-stats-app
+git submodule init
+git submodule update
 ```
 
 ### 2. Configure Environment Variables
