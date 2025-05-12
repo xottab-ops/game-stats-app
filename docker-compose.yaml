@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  backend:
+    extends:
+      file: ./game-stats-backend/docker-compose.yml
+      service: backend
+    env_file:
+      - .env
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    extends:
+      file: ./game-stats-backend/docker-compose.yml
+      service: db
+    env_file:
+      - .env
+
+  frontend:
+    extends:
+      file: ./game-stats-frontend/docker-compose.yaml
+      service: frontend
+    env_file:
+      - .env
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - "80:80"
+    depends_on:
+      - frontend
+
+volumes:
+  postgres_data:
